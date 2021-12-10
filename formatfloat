@@ -10,7 +10,8 @@ String de Formatação:
      ; (Ponto e Vírgula) - Separador para representação de valores positivos, negativos e zero.
      E+ - Notação Científica.
 
-Obs.: Se o Micro estiver configurado para o sistema brasileiro, durante a execução o ponto e a vírgula aparecerão de forma inversa ao que foi colocado na formatação.
+Obs.: Se o Micro estiver configurado para o sistema brasileiro, durante a execução o ponto e a vírgula aparecerão
+de forma inversa ao que foi colocado na formatação.
 
 Exemplos 1:
 FormatFloat( '#,##0.00' , 12345.7809) 	12.345,78
