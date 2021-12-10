@@ -1,0 +1,31 @@
+Função FormatFloat(String de Formatação,ValorPontoFluatuante):String
+
+Formata um Valor em Ponto Flutuante usando a String contendo a Máscara de Formatação e retorna uma String.
+
+String de Formatação:
+     0 (Zero) - Mostra um zero no lugar caso não haja dígito.
+     # (Cancela) - Dígito.
+     ,  (Vírgula) - Separador de milhares.
+     . (Ponto) - Separador de casas decimais.
+     ; (Ponto e Vírgula) - Separador para representação de valores positivos, negativos e zero.
+     E+ - Notação Científica.
+
+Obs.: Se o Micro estiver configurado para o sistema brasileiro, durante a execução o ponto e a vírgula aparecerão de forma inversa ao que foi colocado na formatação.
+
+Exemplos 1:
+FormatFloat( '#,##0.00' , 12345.7809) 	12.345,78
+FormatFloat( '#,##0.00' , 78.9) 	78,90
+FormatFloat( '#,##0.00; (#,##0.00) ; Zero' , -1234.56)  	(1.234,56)
+FormatFloat( '#,##0.00; (#,##0.00) ; Zero' , 0) 	Zero
+
+Exemplos 2:
+String de Formatação 	Valor 1 	Valor 2 	Valor 3 	Valor 4
+nada 	1234 	-1234 	0,5 	0
+0 	1234 	-1234 	1 	0
+0.00 	1234.00 	-1234.00 	0,50 	0,00
+#.## 	1234 	-1234 	,5 	 
+#,##0.00 	1.234,00 	-1,234.00 	0,50 	0,00
+#,##0.00;(#,##0.00) 	1.234,00 	(1.234,00) 	0,50 	0,00
+#,##0.00;;Zero 	1.234,00 	-1.234,00 	0,50 	Zero
+0.000E+00 	1,234E+03 	-1,234E+03 	5,000E-01 	0,000E+00
+#.###E-0 	1,234E3 	-1,234E3 	5E-1 	0E0
