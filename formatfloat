@@ -29,3 +29,5 @@ nada 	               1234 	     -1234 	     0,5 	          0
 #,##0.00;;Zero 	     1.234,00 	     -1.234,00 	0,50 	     Zero
 0.000E+00 	          1,234E+03 	-1,234E+03 	5,000E-01 	0,000E+00
 #.###E-0 	               1,234E3 	     -1,234E3 	     5E-1 	     0E0
+
+:: Fonte: https://www.freepascal.org/docs-html/rtl/sysutils/formatfloat.html
